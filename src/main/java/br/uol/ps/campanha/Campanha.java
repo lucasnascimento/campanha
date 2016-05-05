@@ -1,8 +1,19 @@
 package br.uol.ps.campanha;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Campanha {
 
+    @NotNull
+    @Size(min = 4)
     private String nomeCampanha;
+
+    @NotNull
+    @Min(0)
+    @Max(20)
     private Integer percentualDesconto;
 
     public Campanha() {
