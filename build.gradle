@@ -1,0 +1,22 @@
+group 'br.com.uol.ps'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+compileJava.options.encoding = 'UTF-8'
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven{
+        url 'http://jcenter.bintray.com'
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1+'
+
+    testCompile 'info.cukes:cucumber-java:1.2.4'
+    testCompile 'info.cukes:cucumber-junit:1.2.4'
+}
